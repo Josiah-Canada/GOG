@@ -1,12 +1,15 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Layout from "@/components/Layout";
+import ProductItem from "@/components/ProductItem";
+import data from "@/utils/data";
 
 export default function Home() {
   return (
-<div>
-  <h1 className='text-3xl font-bold'> Glam-On-Glitz</h1>
-</div>
-  )
+    <Layout title="Home page">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        {data.products.map((product) => (
+          <ProductItem product={product} key={product.slug}></ProductItem>
+        ))}
+      </div>
+    </Layout>
+  );
 }
