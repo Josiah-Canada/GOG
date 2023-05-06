@@ -13,12 +13,12 @@ export default function Layout({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 justify-between">
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <a className="text-lg font-bold">Glam On Glitz</a>
             </Link>
             <div>
-              <Link href="/cart">Cart</Link>
-              <Link href="/login">Login</Link>
+              <Link href="/cart"> Cart</Link>
+              <Link href="/login"> Login</Link>
             </div>
           </nav>
         </header>
